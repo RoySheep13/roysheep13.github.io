@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roy的個人網站</title>
+  <meta name="description" content="Roy 做的小專案，以及 QWER 樂團介紹。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1 class="site-title">Roy的個人網站</h1>
+    <p class="intro">我做的小專案都放在這裡，也有一頁介紹 QWER 樂團。勾選想看的項目，沒勾的會先收起來。</p>
+
+    <fieldset class="filter">
+      <legend>要看哪些</legend>
+      <div class="opts">
+        <label><input type="checkbox" data-filter="qwer" checked>QWER 介紹</label>
+        <label><input type="checkbox" data-filter="korean-vocab" checked>韓文歌詞生詞卡</label>
+        <label><input type="checkbox" data-filter="backrooms" checked>後室遊戲</label>
+        <label><input type="checkbox" data-filter="study-plan" checked>動態讀書計畫產生器</label>
+      </div>
+    </fieldset>
+    <p class="status" id="status" aria-live="polite">顯示 4 / 4 項</p>
+
+    <ul class="works">
+      <li data-work="qwer">
+        <a class="work-name" href="qwer.html">QWER 介紹</a>
+        <p class="work-desc">韓國四人女子樂團 QWER 的團名由來、成員、成軍過程和作品。</p>
+        <p class="work-where">本站頁面</p>
+      </li>
+      <li data-work="korean-vocab">
+        <a class="work-name" href="https://korean-vocab.streamlit.app" target="_blank" rel="noopener">韓文歌詞生詞卡</a>
+        <p class="work-desc">結合斷詞技術的語言學習工具，把韓文歌詞拆成單字，整理成生詞卡。</p>
+        <p class="work-where">korean-vocab.streamlit.app</p>
+      </li>
+      <li data-work="backrooms">
+        <a class="work-name" href="https://roysheep13.github.io/backrooms-explorer/" target="_blank" rel="noopener">後室遊戲</a>
+        <p class="work-desc">在瀏覽器裡探索後室的小遊戲。</p>
+        <p class="work-where">roysheep13.github.io/backrooms-explorer</p>
+      </li>
+      <li data-work="study-plan">
+        <a class="work-name" href="https://roysheep13.github.io/study-plan/" target="_blank" rel="noopener">動態讀書計畫產生器</a>
+        <p class="work-desc">輸入條件就能產生讀書計畫，進度有變時可以重新調整。</p>
+        <p class="work-where">roysheep13.github.io/study-plan</p>
+      </li>
+    </ul>
+    <p class="empty" id="empty" hidden>目前沒有勾選任何項目，勾選上面的選項就會顯示。</p>
+
+    <footer class="foot">
+      <a href="https://github.com/RoySheep13">GitHub</a>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
